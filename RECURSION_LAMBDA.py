@@ -4,20 +4,21 @@ def isVowel(ch):
     return ch.upper() in ['A', 'E', 'I', 'O', 'U']
 
 
-def count_vowels(text:str)-> int:
+def count_vowels(text:str , num :int )-> int:
     count = 0
-    for i in range(len(text)):
+
+    if (num == 1):
+        return isVowel(text[num - 1]);
  
-        # Check for vowel
-        if isVowel(text[i]):
-            count += 1
-    return count
+    return (count_vowels(text, num - 1) + isVowel(text[num - 1]));
 
 Text = str (input("Enter your text:  "))
 
-print("The vowels number is:  ", count_vowels(Text))
+print("The vowels number is:  ", count_vowels(Text,len(Text)))
 
 
+## 2) Given a list of numbers : [40,35, 10, 15, 20]
 
+List = [40,35, 10, 15, 20]
 
 
