@@ -12,13 +12,22 @@ def count_vowels(text:str , num :int )-> int:
  
     return (count_vowels(text, num - 1) + isVowel(text[num - 1]));
 
-Text = str (input("Enter your text:  "))
 
+Text = str (input("Enter your text:  "))
 print("The vowels number is:  ", count_vowels(Text,len(Text)))
 
 
 ## 2) Given a list of numbers : [40,35, 10, 15, 20]
 
 List = [40,35, 10, 15, 20]
+list2 = list (map(lambda x:x*x,List))
+
+print(list2)
+#print(filtered_list)
 
 
+'''
+lis=[1,2,3,4]
+newlis = map(lambda x:x*2, lis)
+print(newlis)
+'''
