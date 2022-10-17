@@ -3,11 +3,19 @@
 
 ## 1) Using recursion, if given a word/phrase return how many vowels(a,e,i,o,u) are in that phrase or word:
 #def vowls ():
-'''
-def vowls( i: str ) -> int :
-    if len(i) ==0:
+
+def vowls( t: str ) :
+    if  t== " ":
         return 0 
-    count = 0
+    elif t[0].upper() in ['A', 'E', 'I', 'O', 'U']:
+        return 1 + vowls(t [1:])
+    else :
+        return 0 + vowls(t[1:])
+
+w = "i love python"
+print(" the vowels is : ", vowls("i love python "))
+
+'''
     if i in 'aeiou':
         count +=1
         vowls(i)
@@ -19,24 +27,26 @@ def vowls( i: str ) -> int :
 #w =  ["l","o","v","e"]
 print(vowls("LOVe"))
 '''
+
+'''
 def isVowel(ch):
     return ch.upper() in ['A', 'E', 'I', 'O', 'U']
  
-# Returns count of vowels in str 
-def countVowels(str):
+
+def countVowels(str): 
+
     count = 0
-    # for i in range(len(str)):
+     for i in range(len(str)):
  
-        # Check for vowel
+   
     if isVowel(str[i]):
         count += 1
     return count , countVowels(str , i+1 )
 
 str = 'love '
  
-
 print(countVowels(str))
-
+'''
 
 #### Note: the function should be able to count how many vowels no matter if it is lowercase or uppercase . 
 #### Example: given the phrase "I love python" , it should return : 4 
