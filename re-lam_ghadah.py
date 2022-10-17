@@ -4,11 +4,13 @@
 # First - question
 
 def vowel(phrase : str):
+    count=1
     if phrase == "" :
         return 0
-    return (1 if phrase [0] in 'aeiouAEIOU' else 0) + vowel(phrase [1:])
+    return (count if phrase [0] in 'aeiouAEIOU' else 0) + vowel(phrase [1:])
 
 print(vowel("I love python"))
+
 
 #2ed- question 
 my_list= [40,35, 10, 15, 20]
