@@ -10,4 +10,4 @@ def Rec_find_vowels(text:str):
         return 1 + Rec_find_vowels(text[1:])
     return Rec_find_vowels(text[1:])
 
-Rec_find_vowels("munira")
+print(Rec_find_vowels("munira"))
