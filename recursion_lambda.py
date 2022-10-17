@@ -16,10 +16,11 @@ print(find_vowels("I love python"))
 # 2) Given a list of numbers : [40,35, 10, 15, 20]
 listone = [40, 35, 10, 15, 20]
 # create a new list containing each number from the previous list mutliplied by itself.
-mutliplied_list = [element * 2 for element in listone]
-print(mutliplied_list)
+mutliplied_list = [element * element for element in listone]
+print(list(mutliplied_list))
 # print the new list.
 # Hint: use map() with a lambda funciton
 
-mutliplied_list1 = map((lambda x: x*2), listone)
+mutliplied_list1 = map((lambda x: x*x), listone)
 print(list(mutliplied_list1))
+ 
