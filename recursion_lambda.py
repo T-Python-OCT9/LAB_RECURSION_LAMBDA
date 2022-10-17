@@ -1,10 +1,9 @@
+# LAB_RECURSION_LAMBDA
 # 1) Using recursion, if given a word/phrase return how many vowels(a,e,i,o,u) are in that phrase or word:
-
-
 def find_vowels(i):
     if not i:
         return 0
-    if i[0] in ('A', 'E', 'I', 'O', 'U', 'a', 'e', 'i', 'o', 'u'):
+    if i[0].lower() in 'aeiou':
         count = 1
     else:
         count = 0
@@ -20,7 +19,6 @@ mutliplied_list = [element * element for element in listone]
 print(list(mutliplied_list))
 # print the new list.
 # Hint: use map() with a lambda funciton
-
 mutliplied_list1 = map((lambda x: x*x), listone)
 print(list(mutliplied_list1))
- 
+  
