@@ -1,9 +1,6 @@
 # 1) Using recursion, if given a word/phrase return how many vowels(a,e,i,o,u) are in that phrase or word:
 
 
-from xml.dom.minidom import Element
-
-
 def find_vowels(i):
     if not i:
         return 0
