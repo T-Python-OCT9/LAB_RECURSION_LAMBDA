@@ -19,10 +19,13 @@
 #First question
 
 def numofVowel(user_input):
-    if not user_input:
-        return 0
-    return (1 if user_input[0] in 'aeiouAEIOU' else 0) + numofVowel(user_input[1:])
     
+    if user_input == "":
+        return 0 
+    elif user_input[0] in "aeiouAEIOU":
+        return 1 + numofVowel(user_input[1:])    
+    else: 
+        return 0 + numofVowel(user_input[1:])    
 
 
 print(numofVowel(str(input("Enter a text : "))))
