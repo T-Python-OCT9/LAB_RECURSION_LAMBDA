@@ -9,6 +9,18 @@
 
 ## 2) Given a list of numbers : [40,35, 10, 15, 20]
 
+
+def find_vowels(x : str):
+    vowels_list = ["a", "e", "o","i","u"]
+    for i in vowels_list :
+        if i in vowels_list:
+          vowels= list()
+          result= str(vowels.append(i))
+          
+        else:
+             continue
+        return result
+
 #### create a new list containing each number from the previous list mutliplied by itself.
 #### print the new list.
 #### Hint: use map() with a lambda funciton
